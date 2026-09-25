@@ -1,20 +1,18 @@
-"""
-Task 1 — Thu thập tài liệu chính sách/quy định.
-
-Hướng dẫn:
-    1. Chọn chủ đề của nhóm.
-    2. Tìm tối thiểu 3 tài liệu PDF/DOCX từ nguồn công khai.
-    3. Lưu file gốc vào data/landing/legal/.
-    4. Đặt tên không dấu và thể hiện đúng nội dung.
-
-Ví dụ tài liệu: học phí, học bổng, ký túc xá, quy trình đăng ký.
-Nếu website chặn crawler, hãy chọn nguồn công khai khác; không vượt WAF.
-"""
+"""Thu thập nguyên bản các chính sách PUBG từ nguồn công khai."""
 
 from pathlib import Path
 
+import requests
+
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
+
+POLICY_URLS = {
+    "privacy_policy.html": "https://pubg.com/vi/clause/privacy_policy/label_steam",
+    "term_of_service.html": "https://pubg.com/vi/clause/term_of_service/label_steam",
+    "rules_of_conduct.html": "https://pubg.com/vi/clause/rules_of_conduct/label_steam",
+    "pubg_mods_policy.html": "https://pubg.com/vi/clause/pubg_mods_policy/label_steam",
+}
 
 
 def setup_directory() -> None:
@@ -24,20 +22,16 @@ def setup_directory() -> None:
 
 
 def download_documents() -> None:
-    """Tải ít nhất 3 PDF/DOCX từ nguồn công khai."""
-    # TODO: Có thể tải thủ công hoặc dùng requests.
-    #
-    # Ví dụ:
-    # import requests
-    #
-    # sources = {
-    #     "policy-a.pdf": "https://example.edu/policy-a.pdf",
-    # }
-    # for filename, url in sources.items():
-    #     response = requests.get(url, timeout=30)
-    #     response.raise_for_status()
-    #     (DATA_DIR / filename).write_bytes(response.content)
-    raise NotImplementedError("Implement download_documents")
+    """Lưu nguyên byte HTML, không tóm tắt hoặc chuyển đổi nội dung."""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; RAG-course-crawler/1.0)",
+        "Accept-Language": "vi,en;q=0.8",
+    }
+    for filename, url in POLICY_URLS.items():
+        response = requests.get(url, headers=headers, timeout=30)
+        response.raise_for_status()
+        (DATA_DIR / filename).write_bytes(response.content)
+        print(f"Saved: {DATA_DIR / filename} ({len(response.content)} bytes)")
 
 
 if __name__ == "__main__":
