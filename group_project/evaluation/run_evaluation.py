@@ -75,9 +75,10 @@ def call_with_retry(system_prompt: str, user_message: str, attempts: int = 6) ->
             return call_llm(system_prompt, user_message)
         except Exception as error:
             message = str(error)
-            if "429" not in message and "RESOURCE_EXHAUSTED" not in message:
+            retryable = any(code in message for code in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "RemoteProtocolError"])
+            if not retryable:
                 raise
-            time.sleep(15 * (attempt + 1))
+            time.sleep(10 * (attempt + 1))
     raise RuntimeError("LLM call failed after retries")
 
 
@@ -144,6 +145,7 @@ def evaluate_config(cases: list[dict], use_reranking: bool, top_k: int) -> dict:
             }
         )
         print(f"  case {index:02d} done")
+        time.sleep(2)
     means = {
         metric: round(sum(item["scores"][metric] for item in per_case) / len(per_case), 4)
         for metric in METRICS
