@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Trong bản cập nhật 43.1 của PUBG, thời gian chuyển đổi ngắm bắn qua scope (ADS) của dòng súng máy LMG đã thay đổi như thế nào?",
+    "expected_answer": "Trong bản cập nhật 43.1 của PUBG, thời gian chuyển đổi ngắm bắn qua scope của dòng súng máy LMG đã được tăng lên từ 0.30 giây lên 0.37 giây.",
+    "expected_context": "Thời gian chuyển đổi ngắm bắn qua scope đã được tăng lên.\n- 0.30 giây → 0.37 giây"
+  },
+  {
+    "question": "Hệ số sát thương của các loại súng máy LMG lên phương tiện được điều chỉnh ra sao trong bản cập nhật 43.1?",
+    "expected_answer": "Trong bản cập nhật 43.1, hệ số sát thương lên phương tiện của dòng LMG bị giảm: đối với M249 và RPD, hệ số sát thương giảm từ 1.1x xuống 1.0x (loại bỏ sát thương bổ sung); đối với MG3, hệ số sát thương giảm từ 1.25x xuống 1.1x.",
+    "expected_context": "Sát thương lên Phương tiện\n\n- Hệ số sát thương lên phương tiện đã bị giảm.\n- M249, RPD: 1.1x → 1.0x\n\n- MG3: 1.25x → 1.1x"
+  },
+  {
+    "question": "Tỷ lệ xuất hiện trên bản đồ của hai khẩu súng RPD và M249 bị điều chỉnh giảm bao nhiêu phần trăm trong Cập nhật 43.1?",
+    "expected_answer": "Tỷ lệ xuất hiện trên bản đồ của RPD và M249 đã bị giảm 30% trong bản cập nhật 43.1 nhằm tương xứng hơn với sức mạnh và độ hiếm của dòng súng này trong meta.",
+    "expected_context": "Thay đổi Tỷ lệ xuất hiện\n\n- Tỷ lệ xuất hiện trên bản đồ của RPD và M249 giảm 30%."
+  },
+  {
+    "question": "Người chơi có thể thực hiện những hành động đá cận chiến nào trong PUBG 43.1 và bằng thao tác điều khiển gì?",
+    "expected_answer": "Người chơi có thể thực hiện hai hành động đá cận chiến: Đứng Đá (nhấp chuột phải trên PC hoặc LT trên Console khi không mang vũ khí) và Bay Đá (nhấp chuột phải trên PC hoặc LT trên Console trong khi đang nhảy). Ngoài ra, người chơi có thể gán hành động đá cho một phím tùy chọn trong phần Thiết lập Phím.",
+    "expected_context": "Hai hành động đá đã được thêm vào.\n- Đứng Đá\n- Có thể sử dụng bằng cách nhấp chuột phải (Console: LT) trong khi không mang vũ khí.\n\n- Bay Đá\n- Có thể sử dụng bằng cách nhấp chuột phải (Console: LT) trong khi nhảy.\n\n- Bạn có thể gán hành động đá cho một phím tùy chọn trong phần Thiết lập Phím."
+  },
+  {
+    "question": "Đòn đá mới trong PUBG 43.1 có thể phá hủy hoặc tương tác với những vật thể nào trong môi trường?",
+    "expected_answer": "Đòn đá có thể phá hủy các vật thể gồm: cửa sổ, cửa gỗ, hàng rào gỗ, chai lọ và lốp xe. Những cánh cửa không thể phá hủy có thể được mở nhanh chóng bằng một cú đá. Ngoài ra, người chơi có thể đá vào máy bán hàng tự động để lấy vật phẩm nhanh hơn, nhưng máy sẽ bị hỏng và không thể sử dụng trong một thời gian.",
+    "expected_context": "Các vật thể sau đây có thể bị phá hủy bằng những cú đá:\n- Cửa sổ\n\n- Cửa gỗ\n\n- Hàng rào gỗ\n\n- Chai lọ\n\n- Lốp xe\n\n- Các vật thể tùy thuộc vào kích thước hoặc cấu trúc của chúng có thể không phá hủy được.\n\n- Những cánh cửa không thể phá hủy có thể được mở nhanh chóng bằng một cú đá.\n... Bạn cũng có thể đá vào máy bán hàng tự động để lấy vật phẩm.\n- Bạn có thể lấy vật phẩm nhanh hơn so với các thao tác thông thường, nhưng máy bán hàng tự động sẽ bị hỏng và không thể sử dụng được trong một thời gian."
+  },
+  {
+    "question": "Người chơi được phép sử dụng những loại vũ khí nào trên mặt nước theo bản cập nhật 43.1 và trong điều kiện nào?",
+    "expected_answer": "Người chơi có thể sử dụng vũ khí phụ (súng ngắn và các vật phẩm trang bị ở ô thứ 3) cùng lựu đạn khi đang đứng yên trên mặt nước. Nếu di chuyển khi đang cầm vũ khí hoặc lặn xuống nước, vũ khí sẽ tự động được cất đi và tự rút ra lại khi ngoi lên mặt nước. Lựu đạn chỉ được phép ném theo kiểu từ trên cao xuống.",
+    "expected_context": "Giờ đây, bạn có thể sử dụng vũ khí phụ và lựu đạn trên mặt nước.\n- Bạn có thể sử dụng không chỉ súng ngắn mà còn cả các vật phẩm được trang bị ở ô thứ 3.\n\n- Chúng có thể được sử dụng khi đang đứng yên. Di chuyển khi đang cầm vũ khí hoặc thực hiện động tác lặn sẽ tự động cất vũ khí. Vũ khí sẽ tự động được rút ra lại khi bạn trở lên mặt nước.\n\n- Vũ khí phụ có thể được sử dụng để bắn không nhắm và ngắm bắn qua scope khi ở trên mặt đất.\n- Không thể bắn ngắm từ vai.\n\n-"
+  },
+  {
+    "question": "Tốc độ bơi lặn và cơ chế nhận sát thương của thuyền trong PUBG 43.1 được cải thiện như thế nào?",
+    "expected_answer": "Tốc độ di chuyển khi bơi và lặn đã được tăng thêm 25%. Đối với thuyền, độ bền tổng thể được tăng cường, chuẩn hóa hệ số chịu sát thương từ súng là 50% cho tất cả các loại thuyền, và người chơi có thể sửa chữa thuyền ngay trên mặt nước bằng Bộ Sửa Chữa Đa Năng (không khả dụng khi ở dưới nước).",
+    "expected_context": "Độ bền của tàu thuyền đã được tăng cường trên tổng thể.\n\n- Các hệ số sát thương của súng, vốn trước đây khác nhau tùy theo loại thuyền, nay đã được chuẩn hóa.\n- Tất cả các loại thuyền đều chịu 50% sát thương từ vũ khí hỏa lực.\n\n- Bạn có thể sửa chữa thuyền ngay trên mặt nước bằng Bộ Sửa Chữa Đa Năng.\n- Tính năng này không khả dụng khi ở dưới nước."
+  },
+  {
+    "question": "Tính năng mang và ném vật phẩm mới trong PUBG hoạt động như thế nào và sử dụng phím gì?",
+    "expected_answer": "Người chơi có thể dùng phím H (Console: LB + X) để mang một vật phẩm trên mặt đất mà không chiếm chỗ trong kho đồ, và nhấp chuột trái (Console: RT) để ném vật phẩm đó cho đồng đội. Các vật phẩm có thể mang gồm phụ kiện vũ khí, vật phẩm hồi máu/tăng lực, mũ bảo hiểm, áo giáp, ba lô, lựu đạn và đạn dược. Vật phẩm ném ra không gây sát thương khi trúng người chơi.",
+    "expected_context": "Một số vật phẩm trên mặt đất có thể được mang đi bằng phím H (Console: LB + X).\n- Các vật phẩm đang mang theo không chiếm chỗ trong kho đồ.\n... Bạn có thể ném vật phẩm bằng cách nhấp chuột trái (Console: RT) trong khi mang nó.\n... Các vật phẩm thuộc các danh mục sau đây có thể được mang theo:\n- Phụ kiện vũ khí\n- Vật phẩm hồi máu và tăng lực\n- Mũ bảo hiểm\n- Áo giáp\n- Ba lô\n- Lựu Đạn\n- Đạn dược\n... Các vật phẩm được ném đi không gây sát thương ngay cả khi trúng người chơi."
+  },
+  {
+    "question": "Làm thế nào để sử dụng tức thì một vật phẩm nằm trên mặt đất mà không cần nhặt vào kho đồ?",
+    "expected_answer": "Người chơi giữ phím H (Console: Giữ LB + X) để sử dụng hoặc triển khai ngay các vật phẩm trên mặt đất như vật phẩm hồi máu, nước tăng lực, Khiên Gấp, Cứu Trợ Khẩn Cấp, Súng Cối hoặc C4 mà không cần nhặt vào kho đồ. Người chơi có thể nhấn phím F trong khi đang dùng để hủy, khi đó vật phẩm sẽ rơi xuống ngay dưới chân.",
+    "expected_context": "Một số vật phẩm trên mặt đất có thể được sử dụng ngay lập tức bằng cách giữ phím H (Console: Giữ LB + X).\n- Các vật phẩm có thể được sử dụng hoặc triển khai trực tiếp từ vị trí hiện tại mà không cần nhặt chúng lên.\n- Các vật phẩm thuộc các danh mục sau đây có thể được sử dụng ngay lập tức:\n- Vật phẩm hồi máu và tăng lực\n- Các vật phẩm có thể triển khai như Khiên Gấp và Cứu Trợ Khẩn Cấp.\n- Súng Cối\n- C4\n... Bạn có thể nhấn phím F trong khi đang sử dụng vật phẩm để hủy việc sử dụng đó."
+  },
+  {
+    "question": "Những vật phẩm đã triển khai nào có thể được thu hồi lại bằng phím H trong Cập nhật 43.1?",
+    "expected_answer": "Người chơi có thể thu hồi Khiên Gấp và Súng Cối đã được triển khai bằng cách sử dụng phím H.",
+    "expected_context": "Có thể thu hồi các vật phẩm sau bằng cách sử dụng phím H:\n- Khiên Gấp\n\n- Súng Cối"
+  },
+  {
+    "question": "Độ cao bung dù khẩn cấp tối thiểu và độ cao kích hoạt dù tự động sau khi dùng Cứu Trợ Khẩn Cấp được thay đổi thế nào trong bản 43.1?",
+    "expected_answer": "Độ cao tối thiểu để bung Dù khẩn cấp được điều chỉnh từ 10m xuống còn 9m. Độ cao kích hoạt dù tự động khi rơi sau khi sử dụng Cứu Trợ Khẩn Cấp được tăng từ 150m lên 250m (và khi rơi sau khi hồi sinh điều chỉnh từ 330m xuống 250m). Ngoài ra, nếu tiếp đất trước khi dù bung hoàn toàn, người chơi sẽ phải chịu sát thương rơi.",
+    "expected_context": "Khi rơi xuống sau khi sử dụng Cứu Trợ Khẩn Cấp: 150 m → 250 m\n- Khi rơi xuống sau khi hồi sinh: 330 m → 250 m\n... Độ cao tối thiểu để bung dù khẩn cấp đã được điều chỉnh từ 10 m xuống còn 9 m.\n... Giờ đây nếu bạn tiếp đất sớm trước khi dù bung hoàn toàn, bạn sẽ chịu sát thương của cú rơi."
+  },
+  {
+    "question": "Tại Đảo Khởi hành trong sự kiện PUBG x Jujutsu Kaisen, người chơi tương tác với Hộp Jujutsu Kaisen như thế nào và hiện tượng gì xảy ra?",
+    "expected_answer": "Người chơi được nhận 20 Chú Linh Cầu Bí Ẩn khi bước vào đảo khởi đầu và có thể ném vào Hộp Jujutsu Kaisen. Khi trúng đích đủ 20 lần, chiếc hộp sẽ mở ra, xuất hiện tượng Satoru Gojo và hiệu ứng Bành Trướng Lãnh Địa: Vô Lượng Không Xứ sẽ bao phủ một phạm vi quanh tượng trong 15 giây trước khi biến mất.",
+    "expected_context": "Các Hộp Jujutsu Kaisen đã được đặt tại các hòn đảo khởi hành.\n- Bạn sẽ nhận được 20 Chú Linh Cầu Bí Ẩn khi bước vào các hòn đảo khởi đầu.\n- Có thể ném các Chú Linh Cầu Bí Ẩn vào Hộp Jujutsu Kaisen. Khi trúng đích 20 lần, chiếc hộp sẽ mở ra và tượng Satoru Gojo xuất hiện.\n- Bành Trướng Lãnh Địa: Vô Lượng Không Xứ có hiệu lực trong một phạm vi nhất định quanh bức tượng Satoru Gojo và duy trì trong 15 giây trước khi biến mất."
+  },
+  {
+    "question": "Nhà kho Jujutsu Kaisen trên bản đồ Erangel được bố trí những tính năng và vật phẩm gì?",
+    "expected_answer": "Nhà kho Jujutsu Kaisen trên bản đồ Erangel được bố trí các mô hình nhân vật Jujutsu Kaisen kích thước thật, các điểm chụp ảnh theo chủ đề, cùng các máy bán hàng tự động theo chủ đề Jujutsu Kaisen giúp người chơi nhận vật phẩm tăng cường và hồi máu.",
+    "expected_context": "Bản đồ khả dụng: Erangel\n- Một số nhà kho đã được chuyển đổi thành không gian mang chủ đề Jujutsu Kaisen, đồng thời các nhà kho mới cũng đã được bổ sung tại những địa điểm mới.\n- Các mô hình nhân vật Jujutsu Kaisen kích thước thật và các điểm chụp ảnh đã được bố trí bên trong Nhà kho Jujutsu Kaisen.\n- Sử dụng các máy bán hàng tự động theo chủ đề Jujutsu Kaisen bên trong nhà kho để nhận các vật phẩm tăng cường và hồi máu."
+  },
+  {
+    "question": "Phần thưởng Cấp độ vĩnh viễn của Chế độ Xếp hạng Mùa giải 43 là gì và có thay đổi gì về phần thưởng điểm xếp hạng?",
+    "expected_answer": "Trong Chế độ Xếp hạng Mùa giải 43, người chơi có thể nhận Skin Vũ khí Chế độ Xếp hạng - Mk14 dưới dạng phần thưởng cấp độ vĩnh viễn. Ngoài ra, các Rương Thủ Thư trong phần thưởng điểm chơi xếp hạng đã được thay thế bằng Vé Kiện hàng Chiến binh.",
+    "expected_context": "Skin Vũ khí Chế độ Xếp hạng - Mk14 có thể nhận được dưới dạng Phần thưởng Cấp độ vĩnh viễn.\n... Các Rương Thủ Thư trong Phần thưởng Điểm của Chế độ Xếp hạng đã được thay thế bằng Vé Kiện hàng Chiến binh."
+  },
+  {
+    "question": "Mức độ ưu tiên bản đồ theo khu vực trong Báo Cáo Xoay Vòng Bản Đồ Cập Nhật 43.1 được KRAFTON xác định dựa trên những yếu tố nào?",
+    "expected_answer": "Mức độ ưu tiên bản đồ được xác định qua việc phân tích toàn diện nhiều yếu tố liên quan đến việc sử dụng bản đồ ở tất cả các chế độ chơi, bao gồm: tổng thời gian chơi, số trận đấu, tỷ lệ chọn bản đồ, và tỷ lệ rời đi (dữ liệu được đo lường từ ngày 29/06 đến ngày 25/08).",
+    "expected_context": "Mức độ ưu tiên bản đồ được xác định bằng cách phân tích toàn diện nhiều yếu tố liên quan đến việc sử dụng bản đồ ở tất cả các chế độ, bao gồm tổng thời gian chơi, số trận đấu, tỷ lệ chọn bản đồ, tỷ lệ rời đi.\n- Thời gian đo lường dữ liệu về mức độ ưu tiên bản đồ: Ngày 29/06 - ngày 25/08"
+  },
+  {
+    "question": "Hai tuyển thủ Himass và TanVuu bị xử lý kỷ luật như thế nào sau sự cố vận hành giải đấu PUBG Asia Stars?",
+    "expected_answer": "Do có hành vi stream sniping (xem livestream của đối thủ và sử dụng thông tin bên ngoài game trong lúc thi đấu để áp dụng chiến thuật), hai tuyển thủ Himass và TanVuu bị khóa vĩnh viễn tài khoản game PUBG: BATTLEGROUNDS và bị tước quyền thi đấu vĩnh viễn tại tất cả các giải đấu chính thức ở mọi khu vực (bao gồm PGC, PGS, PNC và các giải đấu do KRAFTON tổ chức/phê duyệt).",
+    "expected_context": "Sau khi xem xét một cách toàn diện kết quả điều tra, chúng tôi đưa ra quyết định xử lý đối với hai tuyển thủ Himass thuộc Anyone's Legend và TanVuu thuộc The Expendables như sau.\n\n- Lý do xử lý: \n- Vi phạm chính sách vận hành PUBG: BATTLEGROUNDS\n- Mục 5.10 về cản trở trải nghiệm game và nghiêm cấm quấy rối.\n\n- Mục 5.12 về lạm dụng.\n\n- Vi phạm nghĩa vụ giữ gìn phẩm chất và hành vi của tuyển thủ PUBG Esports chuyên nghiệp.\n\n- Hình thức chế tài được áp dụng:\n- Khóa vĩnh viễn tài khoản game PUBG: BATTLEGROUNDS của hai tuyển thủ\n\n- Tước quyền thi đấu vĩnh viễn tại tất cả các giải đấu chính thức ở mọi khu vực, bao gồm PGC, PGS, PNC, và tất cả các giải đấu Esports chính thức do KRAFTON tổ chức hoặc phê duyệt. \n\n- Thời điểm áp dụng: Ngay từ thời điểm công bố thông báo này."
+  },
+  {
+    "question": "Theo Quy tắc ứng xử của PUBG, hành vi lập đội trái phép (Teaming) và sử dụng thiết bị phần cứng trái phép (như DMA) bị xử lý như thế nào?",
+    "expected_answer": "Hành vi cố ý tạo phe phái (lập đội trái phép với đối thủ ngoài chế độ chơi) hoặc nhận lợi thế từ việc lập đội với người dùng hack/cheat bị xem là hành vi không thể chấp nhận và bị áp dụng hình phạt. Việc sử dụng phần cứng trái phép như bảng mạch DMA hay chuột tùy chỉnh trái phép để có lợi thế không công bằng sẽ bị phạt nặng, bao gồm cấm chơi trò chơi vĩnh viễn và hạn chế sử dụng dịch vụ trên thiết bị phần cứng đó.",
+    "expected_context": "Nếu bạn sử dụng trái phép các chương trình hoặc thiết bị phần cứng không được KRAFTON cho phép để cổ vũ hành vi chơi trò chơi không công bằng khi sử dụng thiết bị chuột cụ thể, bảng mạch Truy cập bộ nhớ trực tiếp (\"DMA\") hoặc các thiết bị phần cứng khác (gọi chung là “Thiết bị hoặc Phần mềm trái phép”), bạn có thể bị phạt nặng, chẳng hạn như cấm chơi trò chơi vĩnh viễn và hạn chế sử dụng Dịch vụ trên với các thiết bị phần cứng của bạn.\n... KHÔNG TẠO PHE PHÁI (BẰNG CÁCH LẬP ĐỘI VỚI CÁC MỤC ĐÍCH NGOÀI CHẾ ĐỘ TRÒ CHƠI ĐÃ CHỌN)\nCố ý tạo phe phái giữa các người chơi hoặc các đội khác theo các phương thức không được bao hàm trong Trò chơi trong tất cả các chế độ chơi được xem là hành vi không được chấp nhận và sẽ bị áp dụng hình phạt."
+  },
+  {
+    "question": "Người chơi có được phép bán các bản Mod của mình để kiếm tiền trong PUBG theo Chính sách về Mod không?",
+    "expected_answer": "Không. Theo Chính sách về Mod trong PUBG, người chơi bị nghiêm cấm bán các bản Mod của bản thân để kiếm lời hoặc kiếm tiền dưới bất kỳ hình thức nào. Nếu vi phạm lệnh cấm kiếm tiền, người chơi sẽ mất mọi quyền đối với bản Mod đó. Ngoài ra, các bản Mod không được phép thay đổi, sao chép hoặc sửa đổi mã nguồn hoặc cấu trúc nội bộ của phần mềm trò chơi.",
+    "expected_context": "Với điều kiện bạn có giấy phép truy cập vào Trò chơi hợp lệ và tuân thủ Điều khoản Dịch vụ và Thỏa thuận Cấp phép của PUBG cùng Chính sách này, bạn có thể tạo và chia sẻ các bản Mod của bản thân. Để đáp ứng mục đích của Chính sách này, “Mod của bạn” nghĩa là phần sáng tạo gốc của các bản Mod do bạn tạo ra bằng cách sử dụng IP Trò chơi được Công ty cung cấp để tạo Mod, không bao gồm bất kỳ phần nào thuộc sở hữu của, được cấp phép cho, hoặc chịu sự chi phối từ quyền sở hữu trí tuệ của Công ty hay bất kỳ bên thứ ba nào. Bạn·bị cấm bán các bản Mod của bạn để kiếm lời hoặc kiếm tiền dưới bất kỳ hình thức nào. Bạn vẫn giữ lại quyền sở hữu đối với các Mod của bạn. Nếu bạn vi phạm lệnh cấm kiếm tiền, bạn sẽ mất mọi quyền nào mà đáng lẽ ra bạn được giữ lại đối với Mod của bạn.\n\nMod không được thay đổi, sao chép hoặc sửa đổi mã Trò chơi, mã đối tượng, mã nguồn hoặc cấu trúc nội bộ của phần mềm Trò chơi hay các Dịch vụ liên quan."
+  }
+]
