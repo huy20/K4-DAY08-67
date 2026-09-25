@@ -26,6 +26,8 @@ TEMPERATURE = 0.3
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai").strip().lower()
 LLM_MODEL = os.getenv("LLM_MODEL", "").strip()
 
+SAFE_REFUSAL = "Tôi không thể xác minh thông tin này từ nguồn hiện có."
+
 SYSTEM_PROMPT = """Bạn là trợ lý giải đáp thắc mắc dựa trên tài liệu được cung cấp.
 Quy tắc:
 1. Trả lời CHÍNH XÁC và CHỈ DỰA VÀO context bên dưới.
@@ -116,19 +118,11 @@ def call_llm(system_prompt: str, user_message: str) -> str:
 def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
     """Trả về GenerationResult theo hợp đồng."""
     if not query.strip() or top_k <= 0:
-        return {
-            "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
-            "sources": [],
-            "retrieval_source": "none",
-        }
+        return {"answer": SAFE_REFUSAL, "sources": [], "retrieval_source": "none"}
 
     chunks = retrieve(query, top_k=top_k)
     if not chunks:
-        return {
-            "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
-            "sources": [],
-            "retrieval_source": "none",
-        }
+        return {"answer": SAFE_REFUSAL, "sources": [], "retrieval_source": "none"}
 
     reordered = reorder_for_llm(chunks)
     context = format_context(reordered)
@@ -136,10 +130,10 @@ def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
 
     try:
         raw_answer = call_llm(SYSTEM_PROMPT, user_message)
-        answer = raw_answer.strip() if raw_answer and raw_answer.strip() else "Tôi không thể xác minh thông tin này từ nguồn hiện có."
+        answer = raw_answer.strip() if raw_answer and raw_answer.strip() else SAFE_REFUSAL
     except Exception as err:
         print(f"LLM call failed: {err}")
-        answer = "Tôi không thể xác minh thông tin này từ nguồn hiện có."
+        answer = SAFE_REFUSAL
 
     primary_method = chunks[0].get("retrieval_method", "hybrid")
     retrieval_source = "pageindex" if primary_method == "pageindex" else "hybrid"

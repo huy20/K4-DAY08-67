@@ -12,6 +12,7 @@ chạy lại pipeline không tạo dữ liệu trùng. Task 5 phải dùng chung
 """
 
 import os
+import time
 from pathlib import Path
 from typing import Any
 
@@ -38,6 +39,50 @@ _ST_MODEL = None
 _GENAI_CLIENT = None
 _OPENAI_CLIENT = None
 
+_GEMINI_TIMESTAMPS: list[float] = []
+_GEMINI_PER_MINUTE = 90
+_GEMINI_SUB_BATCH = 50
+
+
+def _embed_gemini(texts: list[str]) -> list[list[float]]:
+    """Embed bằng Gemini, tôn trọng rate limit và retry khi gặp 429."""
+    global _GENAI_CLIENT, _GEMINI_TIMESTAMPS
+
+    if _GENAI_CLIENT is None:
+        from google import genai
+
+        _GENAI_CLIENT = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    model_name = os.getenv("EMBEDDING_MODEL") or "gemini-embedding-001"
+
+    vectors: list[list[float]] = []
+    for start in range(0, len(texts), _GEMINI_SUB_BATCH):
+        batch = texts[start : start + _GEMINI_SUB_BATCH]
+        while True:
+            now = time.monotonic()
+            _GEMINI_TIMESTAMPS = [t for t in _GEMINI_TIMESTAMPS if now - t < 60]
+            if len(_GEMINI_TIMESTAMPS) + len(batch) <= _GEMINI_PER_MINUTE:
+                break
+            time.sleep(max(1.0, 60 - (now - _GEMINI_TIMESTAMPS[0]) + 0.5))
+
+        response = None
+        for attempt in range(5):
+            try:
+                response = _GENAI_CLIENT.models.embed_content(
+                    model=model_name,
+                    contents=batch,
+                )
+                break
+            except Exception as error:
+                if "429" not in str(error) and "RESOURCE_EXHAUSTED" not in str(error):
+                    raise
+                time.sleep(15 * (attempt + 1))
+        if response is None:
+            raise RuntimeError("Gemini embedding failed after retries")
+
+        _GEMINI_TIMESTAMPS.extend([time.monotonic()] * len(batch))
+        vectors.extend(list(item.values) for item in response.embeddings)
+    return vectors
+
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
     """Dispatch theo EMBEDDING_PROVIDER trong .env."""
@@ -57,18 +102,7 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
         return embeddings.tolist()
 
     elif provider == "gemini":
-        global _GENAI_CLIENT
-        if _GENAI_CLIENT is None:
-            from google import genai
-
-            api_key = os.getenv("GEMINI_API_KEY")
-            _GENAI_CLIENT = genai.Client(api_key=api_key)
-        model_name = os.getenv("EMBEDDING_MODEL") or "text-embedding-004"
-        response = _GENAI_CLIENT.models.embed_content(
-            model=model_name,
-            contents=texts,
-        )
-        return [item.values for item in response.embeddings]
+        return _embed_gemini(texts)
 
     elif provider == "openai":
         global _OPENAI_CLIENT

@@ -44,6 +44,12 @@ data/_tmp_pdf/
 *.log
 pageindex_doc_ids.json
 pageindex_pdfs/
+data/pageindex_cache.json
+data/_pageindex_tmp/
+
+# Generated artifacts
+chroma_db/
+group_project/evaluation/evaluation_results.json
 
 # Jupyter
 .ipynb_checkpoints/
